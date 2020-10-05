@@ -5,7 +5,9 @@ export default function Add(props) {
 
     const onFormSubmit = event => {
         event.preventDefault()
+        if (!text) return
         props.add(text, new Date().toLocaleString())
+        setText('')
     }
 
     return (
